@@ -11,9 +11,9 @@ func secondMaxElement(array []int) {
 	secondMax = 0
 	for i := 0; i < len(array); i++ {
 		if array[i] > max {
-			secondMax = array[i]
-			if secondMax < max || secondMax > array[i-1] {
-				secondMax = array[i-1]
+			Max = array[i]
+			if secondMax < max {
+				secondMax = array[i]
 			}
 		}
 	}

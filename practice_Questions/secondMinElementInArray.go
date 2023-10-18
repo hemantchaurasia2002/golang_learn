@@ -11,9 +11,9 @@ func secondMinElement(array []int) {
 	secondMin = 0
 	for i := 0; i < len(array); i++ {
 		if array[i] < min {
-			secondMin = array[i]
-			if secondMin > min || secondMin < array[i-1] {
-				secondMin = array[i-1]
+			Min = array[i]
+			if secondMin > min {
+				secondMin = array[i]
 			}
 		}
 	}
