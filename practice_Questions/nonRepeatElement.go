@@ -1,4 +1,6 @@
 // find non repeated element in unsorted array
+// Input - [3 1 2 5 3 2 1]
+// Output - 5
 
 
 package main
