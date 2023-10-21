@@ -1,27 +1,21 @@
 // find non repeated element in unsorted array
 
-
 package main
 
 import (
 	"fmt"
 )
 
-func nonRepeatElement(array []int) {
-	var count int
-	var nre int
-	for i := 0; i < len(array)-1; i++ {
-		count = 0
-		for j := i + 1; j < len(array); j++ {
-			if array[i] == array[j] {
-				count++
-			}
-		}
-		if count == 0 {
-			nre = array[i]
-		}
+func nonRepeatedElement(array []int) {
+	var xor int
+	xor = 0000
+	for i := 0; i < len(array); i++ {
+		xor = xor ^ array[i]
+		// if xor == array[i] {
+		// 	fmt.Println("Non Repeated Element:", xor)
+		// }
 	}
-	fmt.Println("NRE : ", nre)
+	fmt.Println("Non Repeated Element:", xor)
 	return
 }
 
@@ -34,6 +28,5 @@ func main() {
 	for i := 0; i < size; i++ {
 		fmt.Scanf("%d", &array[i])
 	}
-	nonRepeatElement(array)
-
+	nonRepeatedElement(array)
 }
